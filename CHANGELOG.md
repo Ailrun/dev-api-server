@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - filePath of Serving APIs now accept path-to-regexp like strings.
 
+### Fixed
+- File serving is now work
+  Internally, file path is changed to absolute path, but Koa option for handling absolute path was not added.
+
 ## 1.0.0 - 2018-07-10
 
 ### Initialize
