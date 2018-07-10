@@ -11,4 +11,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - dev-api-server executable
 
-[Unreleased]: https://github.com/Ailrun/dev-api-servercompare/v1.0.0...HEAD
+[Unreleased]: https://github.com/Ailrun/dev-api-server/compare/v1.0.0...HEAD
