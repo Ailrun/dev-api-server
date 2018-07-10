@@ -1,0 +1,8 @@
+{
+  "apis": [
+    {
+      "apiPath": "/:file",
+      "filePath": ":file"
+    }
+  ]
+}

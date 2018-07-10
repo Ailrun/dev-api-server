@@ -128,6 +128,8 @@ Serving API is an api with `"filePath"` (REQUIRED) whose value is string. This A
 ```
 will serve `./serving/abc.html` for path `/file/abc.html`, and serve `./serving/world/is.js` for path `/file/world/is.js`.
 
+You can try `examples/path-to-regexp.json` in `examples` directory with paths like `/dev-api.json` and `/my-api.json`
+
 #### Failing API
 Failing API is an api with `"code"` (REQUIRED) whose value is number. This API always sends that code as a HTTP status code.
 
