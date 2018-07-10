@@ -1,24 +1,11 @@
-import { isAbsolute, join } from 'path';
-import { cwd } from 'process';
-
 import Koa from 'koa';
 import route from 'koa-route';
-import send from 'koa-send';
 
 import { exhaustiveChecker } from '../utilities';
-import {
-  API,
-  APIKind,
-  Headers,
-} from '../types';
+import { API, APIKind } from '../types';
 
-const setHeaders = (ctx: Koa.Context, headers?: Headers) => {
-  if (headers !== undefined) {
-    Object.keys(headers).forEach((key) => {
-      ctx.set(key, headers[key]);
-    });
-  }
-}
+import { appendServingAPI } from './appendServingAPI';
+import { setHeaders } from './setHeaders';
 
 export const appendAPI = (server: Koa, api: API) => {
   switch (api.kind) {
@@ -30,13 +17,7 @@ export const appendAPI = (server: Koa, api: API) => {
       break;
     }
     case APIKind.SERVING: {
-      server.use(route.all(api.apiPath, (ctx) => {
-        setHeaders(ctx, api.headers);
-        const absoluteFilePath = isAbsolute(api.filePath) ?
-          api.filePath :
-          join(cwd(), api.filePath);
-        return send(ctx, absoluteFilePath);
-      }));
+      appendServingAPI(server, api);
       break;
     }
     case APIKind.BODY: {
