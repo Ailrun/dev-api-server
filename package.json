@@ -35,7 +35,8 @@
     "start": "node dist/bin",
     "build": "tsc -p ./tsconfig.json",
     "watch": "tsc -w --preserveWatchOutput -p ./tsconfig.json > /dev/null 2>&1",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "prepublishOnly": "run-s clean build"
   },
   "dependencies": {
     "@types/yargs": "^11.0.0",
