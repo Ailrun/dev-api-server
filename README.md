@@ -115,7 +115,18 @@ Body API is an api with `"body"` (REQUIRED) whose value is string or object.
 However, if you want to get the object as JSON format, you should add `"Content-Type"` header just like what we did in [headers section](#headers).
 
 #### Serving API
-Serving API is an api with `"filePath"` (REQUIRED) whose value is string. This API sends a file in the `"filePath"`. When you use relative path for `"filePath"`, it will resolved from the directory where you execute dev-api-server.
+Serving API is an api with `"filePath"` (REQUIRED) whose value is string. This API sends a file in the `"filePath"`. When you use relative path for `"filePath"`, it will resolved from the directory where you execute dev-api-server. `"filePath"` also accepts path-to-regexp parameters. For example,
+``` json
+{
+  "apis": [
+    {
+      "apiPath": "/file/:file",
+      "filePath": "./serving/:file"
+    }
+  ]
+}
+```
+will serve `./serving/abc.html` for path `/file/abc.html`, and serve `./serving/world/is.js` for path `/file/world/is.js`.
 
 #### Failing API
 Failing API is an api with `"code"` (REQUIRED) whose value is number. This API always sends that code as a HTTP status code.

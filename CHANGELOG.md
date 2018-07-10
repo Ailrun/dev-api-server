@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+- filePath of Serving APIs now accept path-to-regexp like strings.
+
 ## 1.0.0 - 2018-07-10
 
 ### Initialize
