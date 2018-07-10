@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.0] - 2018-07-11
+
 ### Added
 - filePath of Serving APIs now accept path-to-regexp like strings.
 
@@ -18,4 +20,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Initialize
 - dev-api-server executable
 
-[Unreleased]: https://github.com/Ailrun/dev-api-server/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/Ailrun/dev-api-server/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/Ailrun/dev-api-server/compare/v1.0.0...v1.1.0
