@@ -1,0 +1,12 @@
+{
+  "apis": [
+    {
+      "apiPath": "/dev",
+      "body": "hello"
+    },
+    {
+      "apiPath": "/(.*)",
+      "code": 503
+    }
+  ]
+}

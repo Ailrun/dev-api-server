@@ -1,0 +1,12 @@
+{
+  "apis": [
+    {
+      "apiPath": "/",
+      "body": "Hello dev-api-server!"
+    },
+    {
+      "apiPath": "/file",
+      "filePath": "dev-api.json"
+    }
+  ]
+}
