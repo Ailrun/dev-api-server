@@ -31,7 +31,7 @@ export const appendServingAPI = (server: Koa, api: ServingAPI) => {
     }, {});
     const file = compile(absoluteFilePath)(data);
     setHeaders(ctx, api.headers);
-    await send(ctx, file);
+    await send(ctx, file, { root: '/' });
     return;
   }));
 }
