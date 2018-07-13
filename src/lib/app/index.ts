@@ -1,4 +1,5 @@
 import Koa from 'koa';
+import cors from '@koa/cors';
 
 import {
   ServerConfig,
@@ -11,11 +12,12 @@ export const makeApp = (config: ServerConfig) => {
     throw Error('Server configuration should include more than 1 api');
   }
 
-  const server = new Koa();
+  const app = new Koa();
+  app.use(cors());
 
   config.apis.map((api) => {
-    appendAPI(server, api);
+    appendAPI(app, api);
   });
 
-  return server;
+  return app;
 };
