@@ -48,7 +48,7 @@
     "koa-route": "^3.2.0",
     "koa-send": "^5.0.0",
     "path-to-regexp": "^2.2.1",
-    "yargs": "^12.0.1"
+    "yargs": "^12.0.2"
   },
   "devDependencies": {
     "@types/koa__cors": "^2.2.2",
